@@ -1,5 +1,5 @@
 {
-  "name": "e-imzoserver",
+  "name": "proxy-server",
   "version": "1.0.0",
   "description": "e-imozo api",
   "main": "server.js",
