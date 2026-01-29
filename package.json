@@ -1,0 +1,17 @@
+{
+  "name": "e-imzoserver",
+  "version": "1.0.0",
+  "description": "e-imozo api",
+  "main": "server.js",
+  "scripts": {
+    "test": "server",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
