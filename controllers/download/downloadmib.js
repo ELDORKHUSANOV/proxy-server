@@ -8,15 +8,15 @@ module.exports = {
             return res.status(400).json({ error: "Parameter 'id' is required" });
         }
 
-        const username = 'mib-pdf';
-        const password = 'fdsajkfh8934rt89f37823&*82134fhfff';
+        const username = 'mib-test`';
+        const password = '&*82134fhfff';
 
         const auth = 'Basic ' + Buffer
             .from(`${username}:${password}`)
             .toString('base64');
 
         const apiUrl =
-            `http://192.168.254.111/api/integration/Mib/GetOrgSheetDocAsPdfBase64` +
+            `http://111.168.111.111/api/integration/Mib/GetOrgSheetDocAsPdfBase64` +
             `?workNumber=${id}`;
 
         try {

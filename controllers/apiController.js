@@ -3,7 +3,7 @@ const axios = require('axios');
 function getHeaders(req, contentType = 'application/json') {
     return {
         'Content-Type': contentType,
-        'Host': 'invoice.uzasbo.uz',
+        'Host': 'test',
         'X-Real-IP': '1.2.3.4'
     };
 }
@@ -13,7 +13,7 @@ module.exports = {
         const pkcs7 = req.body.pk7;
         try {
             const response = await axios.post(
-                'http://192.168.254.111:30999/frontend/timestamp/pkcs7',
+                'http://111.111.111.111:30999/frontend/timestamp/pkcs7',
                 pkcs7,
                 { headers: getHeaders(req, 'text/plain') }
             );
@@ -27,7 +27,7 @@ module.exports = {
         const pkcs7 = req.body.pk7;
         try {
             const response = await axios.post(
-                'http://192.168.254.111:30999/backend/pkcs7/verify/attached',
+                'http://111.111.111.111:30999/backend/pkcs7/verify/attached',
                 pkcs7,
                 { headers: getHeaders(req, 'text/plain') }
             );
@@ -42,7 +42,7 @@ module.exports = {
         const pkcs7 = pkcs7a + pkcs7b;
         try {
             const response = await axios.post(
-                'http://192.168.254.111:30999/frontend/pkcs7/join',
+                'http://111.111.111.111:30999/frontend/pkcs7/join',
                 pkcs7,
                 { headers: getHeaders(req, 'text/plain') }
             );
