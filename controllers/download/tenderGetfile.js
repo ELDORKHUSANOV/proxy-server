@@ -11,10 +11,10 @@ module.exports = {
         }
 
         const apiUrl =
-            `http://192.168.254.145/v1/atm/dmbat/file/get-file/${id1}/${id2}`;
+            `http://111.111.111.111/v1/atm/dmbat/file/get-file/${id1}/${id2}`;
 
-        const username = 'dmbat_get_files';
-        const password = 'pass_dmbat';
+        const username = 'test';
+        const password = 'test';
 
         const auth = 'Basic ' + Buffer
             .from(`${username}:${password}`)
@@ -24,7 +24,7 @@ module.exports = {
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: auth,
-                    Accept: '*/*', // 🔴 MUHIM: har qanday fayl
+                    Accept: '*/*', //
                     'Cache-Control': 'no-cache'
                 },
                 responseType: 'arraybuffer',
