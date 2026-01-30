@@ -3,8 +3,19 @@ const router = express.Router();
 
 const mibController = require('../controllers/download/downloadmib');
 const ishonchnomaController = require('../controllers/download/ishonchnomadownload');
-debugger
-router.get('/mib', mibController.downloadMib);                 // /download/mib?id=...
-router.get('/ishonchnoma', ishonchnomaController.downloadIshonchnoma); // /download/ishonchnoma?id=...
+const tenderGetfileController = require('../controllers/download/tenderGetfile');
+// MIB
+router.get('/mib', mibController.downloadMib);
+// /download/mib?id=...
+// Ishonchnoma
+router.get('/ishonchnoma', ishonchnomaController.downloadIshonchnoma);
+// /download/ishonchnoma?id=...
+
+// Tender / ATM file (id1, id2 bilan)
+router.get(
+    '/tender-getfile/:id1/:id2',
+    tenderGetfileController.getAtmFile
+);
+// /download/tender-getfile/123/456
 
 module.exports = router;
